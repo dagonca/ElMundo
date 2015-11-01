@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    sleep(0);
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    ViewController *pageViewController = [[ViewController alloc] init];
+    
+    self.rootViewController = [[UINavigationController alloc] initWithRootViewController:pageViewController];
+    self.window.rootViewController = self.rootViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
     return YES;
 }

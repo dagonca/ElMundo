@@ -19,7 +19,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
+@property (nonatomic, strong) UINavigationController *rootViewController;
 
 @end
 
